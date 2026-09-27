@@ -1,0 +1,426 @@
+/* Root Variables */
+:root {
+  /* Shadows */
+  --shadow-lg: 0 10px 15px -3px #8d54ff40, 0 4px 6px -4px #8d54ff40;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --normal-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Primary Brand Colors */
+  --primary-color: #7f22fe;
+  --primary-dark: #4f39f6;
+  --primary-light: #8d54ff;
+
+  /* Theme & Neutral Colors */
+  --bg-body: #f6fafb;
+  --bg-light: #f6f3f4;
+  --bg-input: #fbf9fa;
+  --text-dark: #364153;
+  --text-muted: #99a1af;
+  --border-color: #d1d5dc;
+
+  /* Status Colors */
+  --blue-primary: #2b7fff;
+  --blue-secondary: #155dfc;
+  --warning-primary: #ffb900;
+  --warning-secondary: #ff6900;
+  --danger-primary: #ff2056;
+  --danger-secondary: #e7000b;
+  --danger-accent: #ec003f;
+  --success-primary: #009966;
+}
+
+/* Global Base Styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-body);
+  padding-top: 90px;
+}
+
+.swal2-container {
+  z-index: 999999 !important;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Navbar */
+
+.app-icon {
+  width: 44px;
+  height: 44px;
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(to bottom right, var(--primary-color), var(--primary-dark));
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.title-tag {
+  color: var(--primary-color);
+}
+
+.add-btn {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+  padding: 10px 16px;
+  transition: 0.2s all;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  transition: 0.2s all;
+}
+
+.nav-icon:hover {
+  background-color: var(--bg-light);
+  color: var(--text-dark) !important;
+  cursor: pointer;
+}
+
+/* Dashboard Cards */
+.status-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.list-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.status-card {
+  box-shadow: var(--shadow-sm);
+  transition: 0.1s all;
+}
+
+.status-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.status-icon-1 {
+  background: linear-gradient(to bottom right, var(--blue-primary), var(--blue-secondary));
+  box-shadow:
+    0 10px 15px -3px rgba(59, 130, 246, 0.25),
+    0 4px 6px -4px rgba(59, 130, 246, 0.25);
+}
+
+.status-icon-2 {
+  background: linear-gradient(to bottom right, var(--warning-primary), var(--warning-secondary));
+  box-shadow:
+    0 10px 15px -3px rgba(245, 158, 11, 0.25),
+    0 4px 6px -4px rgba(245, 158, 11, 0.25);
+}
+
+.status-icon-3 {
+  background: linear-gradient(to bottom right, var(--danger-primary), var(--danger-secondary));
+  box-shadow:
+    0 10px 15px -3px rgba(244, 63, 94, 0.25),
+    0 4px 6px -4px rgba(244, 63, 94, 0.25);
+}
+
+/* Search Input */
+input[type="search"] {
+  padding: 14px 16px 14px 44px;
+  transition: 0.3s all;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 2px #8d54ff33;
+}
+
+/* Contact Cards */
+.card {
+  box-shadow: var(--shadow-sm);
+  transition: 0.2s all;
+}
+
+.card:hover {
+  box-shadow: var(--normal-shadow-lg);
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.card-body-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-size: 0.75rem;
+}
+
+.card-body-icon-1 {
+  background-color: #ecfdf5;
+  color: var(--success-primary);
+  transition: 0.2s all;
+}
+
+.card-body-icon-2 {
+  background-color: #f5f3ff;
+  color: var(--primary-color);
+  transition: 0.2s all;
+}
+
+.card-body-icon-3 {
+  background-color: #dbeafe;
+  color: var(--blue-secondary);
+}
+
+/* Footer Buttons */
+.card-footer a,
+.card-footer button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none !important;
+  border-radius: 7px;
+}
+
+.card-footer a:nth-child(1) {
+  background-color: #ecfdf5;
+  color: var(--success-primary);
+  transition: 0.2s all;
+}
+
+.card-footer a:nth-child(1):hover {
+  background-color: #d0fae5;
+}
+
+.card-footer a:nth-child(2) {
+  background-color: #f5f3ff;
+  color: var(--primary-color);
+  transition: 0.2s all;
+}
+
+.card-footer a:nth-child(2):hover {
+  color: var(--warning-primary);
+  background-color: #ede9fe;
+}
+
+.card-footer button {
+  color: var(--text-muted);
+  background-color: var(--bg-input);
+  transition: 0.2s all;
+}
+
+.card-footer button:nth-child(1):hover {
+  color: var(--warning-primary);
+  background-color: var(--bg-light);
+}
+
+.card-footer button:nth-child(2):hover {
+  color: var(--danger-primary);
+  background-color: var(--bg-light);
+}
+
+.card-footer button:nth-child(3):hover {
+  color: var(--primary-dark);
+  background-color: #eef2ff;
+}
+
+.card-footer button:nth-child(4):hover {
+  color: var(--danger-accent);
+  background-color: #fff1f2;
+}
+
+/* Sidebar & Mini Cards */
+.list-favorits {
+  background: linear-gradient(to right, #fffbeb, #fff7ed);
+}
+
+.list-emergancy {
+  background: linear-gradient(to right, #fff1f2, #fef2f2);
+}
+
+.mini-contact {
+  min-height: 120px;
+}
+
+.empty-contact div {
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-light);
+  color: var(--border-color);
+}
+
+.card-icon-mini {
+  width: 40px;
+  height: 40px;
+}
+
+.mini-card {
+  background-color: var(--bg-input);
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.mini-card a {
+  border-radius: 8px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.2s all;
+}
+
+.mini-card-favorite:hover {
+  background-color: #fffbeb;
+}
+
+.mini-card-favorite a {
+  color: var(--success-primary);
+  background: #d0fae5;
+}
+
+.mini-card-favorite:hover a {
+  background-color: var(--success-primary);
+  color: #fff;
+}
+
+.mini-card-emergency:hover {
+  background-color: #fff1f2;
+}
+
+.mini-card-emergency a {
+  color: var(--danger-accent);
+  background-color: #ffe4e6;
+}
+
+.mini-card-emergency:hover a {
+  background-color: var(--danger-primary);
+  color: #fff;
+}
+
+/* Modal Form Controls */
+.contact-model {
+  z-index: 9999;
+  position: fixed;
+  inset: 0;
+  background-color: #10182899;
+  backdrop-filter: blur(4px);
+}
+
+.contact-model .model {
+  max-width: 512px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.contact-model .model input,
+.contact-model .model textarea,
+.contact-model .model select {
+  display: block;
+  width: 100%;
+  resize: none;
+  padding: 12px 16px;
+  background: var(--bg-input);
+  font-size: 0.875rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.contact-model .model input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-model .model label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.avatarPreview {
+  background: linear-gradient(to bottom right, var(--blue-primary), var(--blue-secondary));
+  width: 96px;
+  height: 96px;
+}
+
+.avatarSelect {
+  width: fit-content;
+  background: var(--bg-light);
+  padding: 8px 16px;
+  color: var(--text-dark);
+}
+
+.cancle-btn {
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  transition: 0.2s;
+}
+
+.cancle-btn:hover {
+  background-color: #ebe6e7;
+  padding: 12px 20px;
+}
+
+.save-btn {
+  padding: 12px 20px;
+  background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+  transition: 0.2s all;
+}
+
+.save-btn:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.x-btn {
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+}
+
+.x-btn:hover {
+  color: #4a5565;
+  background: var(--bg-light);
+}
+
+/* Badges & Indicators */
+.isFavorite {
+  background-color: #fef3c6 !important;
+}
+
+.isEmergency {
+  background-color: #ffe4e6 !important;
+  color: var(--danger-primary) !important;
+}
+
+.mini-badge {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-badge-1 {
+  transform: translate(2px, -2px);
+}
+
+.mini-badge-2 {
+  transform: translate(2px, 2px);
+  background-color: var(--danger-primary);
+  }
